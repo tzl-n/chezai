@@ -71,8 +71,9 @@ class HomeActivity : AppCompatActivity() {
         
         // 快捷控车
         findViewById<LinearLayout>(R.id.menuControl).setOnClickListener {
-            Toast.makeText(this, "快捷控车", Toast.LENGTH_SHORT).show()
             drawerLayout.closeDrawers()
+            val intent = Intent(this, QuickControlActivity::class.java)
+            startActivity(intent)
         }
         
         // 活物监测

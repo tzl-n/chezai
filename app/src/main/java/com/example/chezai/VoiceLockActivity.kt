@@ -3,17 +3,18 @@ package com.example.chezai
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class ChargeCompletedActivity : AppCompatActivity() {
+class VoiceLockActivity : AppCompatActivity() {
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_charge_completed)
+        setContentView(R.layout.activity_voice_lock)
         
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -30,12 +31,10 @@ class ChargeCompletedActivity : AppCompatActivity() {
             finish()
         }
         
-        // 关闭按钮
-        findViewById<Button>(R.id.btnClose).setOnClickListener {
-            val intent = Intent(this, HomeActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+        // 新增录音锁按钮
+        findViewById<Button>(R.id.btnAddRecord).setOnClickListener {
+            val intent = Intent(this, AddVoiceLockActivity::class.java)
             startActivity(intent)
-            finish()
         }
     }
 }
