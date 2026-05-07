@@ -14,7 +14,7 @@ import android.widget.Toast
 
 class SmartChargeActivity : AppCompatActivity() {
     
-    private var timeRemaining = 1823 // 30分23秒，总共秒数
+    private var timeRemaining = 1823 // 30分23秒，总共秒数1
     private var handler: Handler? = null
     private var countdownRunnable: Runnable? = null
     
