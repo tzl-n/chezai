@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_message"
+        android:icon="@drawable/ic_nav_message"
+        android:title="消息" />
+    <item
+        android:id="@+id/nav_key"
+        android:icon="@drawable/ic_nav_key"
+        android:title="钥匙管理" />
+    <item
+        android:id="@+id/nav_upgrade"
+        android:icon="@drawable/ic_nav_upgrade"
+        android:title="系统升级" />
+    <item
+        android:id="@+id/nav_charge"
+        android:icon="@drawable/ic_nav_charge"
+        android:title="智能充电" />
+    <item
+        android:id="@+id/nav_control"
+        android:icon="@drawable/ic_nav_control"
+        android:title="快捷控车" />
+    <item
+        android:id="@+id/nav_monitor"
+        android:icon="@drawable/ic_nav_monitor"
+        android:title="活物监测" />
+    <item
+        android:id="@+id/nav_log"
+        android:icon="@drawable/ic_nav_log"
+        android:title="日志管理" />
+    <item
+        android:id="@+id/nav_geo"
+        android:icon="@drawable/ic_nav_geo"
+        android:title="地理标签" />
+    <item
+        android:id="@+id/nav_privacy"
+        android:icon="@drawable/ic_nav_privacy"
+        android:title="私密安全" />
+</menu>

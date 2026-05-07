@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeDrawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <!-- 主内容区域 -->
+    <FrameLayout
+        android:id="@+id/homeMainContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/content_main" />
+    </FrameLayout>
+
+    <!-- 侧边导航 -->
+    <com.google.android.material.navigationrail.NavigationRailView
+        android:id="@+id/homeNavigationRail"
+        android:layout_width="72dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#F44336"
+        app:menu="@menu/navigation_menu"
+        app:labelVisibilityMode="labeled" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

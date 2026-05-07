@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    
+    <!-- 外圆环 -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#E0E0E0"
+        android:strokeWidth="1"
+        android:pathData="M50,10 A40,40 0 1,1 49.9,10" />
+    
+    <!-- 中圆环 -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#E0E0E0"
+        android:strokeWidth="1"
+        android:pathData="M50,20 A30,30 0 1,1 49.9,20" />
+    
+    <!-- 内圆环 -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#9E9E9E"
+        android:strokeWidth="2"
+        android:pathData="M50,30 A20,20 0 1,1 49.9,30" />
+    
+    <!-- 中心救生圈图标 -->
+    <path
+        android:fillColor="#FF0000"
+        android:pathData="M50,38 A12,12 0 1,1 49.9,38 M50,42 A8,8 0 1,0 49.9,42"
+        android:fillType="evenOdd" />
+    
+    <!-- 救生圈的四个分隔 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,38 L52,38 L52,42 L50,42 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,38 L48,38 L48,42 L50,42 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,38 L50,36 L52,36 L52,38 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,42 L50,44 L52,44 L52,42 Z" />
+    
+</vector>

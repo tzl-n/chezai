@@ -1,0 +1,43 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="120dp"
+    android:viewportWidth="200"
+    android:viewportHeight="120">
+    <!-- 充电桩主体 -->
+    <path
+        android:fillColor="#F44336"
+        android:pathData="M70,20 L130,20 L130,80 L70,80 Z" />
+    <!-- 充电桩顶部 -->
+    <path
+        android:fillColor="#F44336"
+        android:pathData="M60,20 L140,20 L140,30 L60,30 Z" />
+    <!-- 闪电标志 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M105,35 L85,60 L95,60 L90,85 L115,55 L105,55 Z" />
+    <!-- 充电线 -->
+    <path
+        android:strokeColor="#F44336"
+        android:strokeWidth="4"
+        android:pathData="M130,50 Q150,50 150,70 Q150,90 130,90" />
+    <!-- 汽车轮廓 -->
+    <path
+        android:fillColor="#F44336"
+        android:pathData="M140,70 L180,70 L180,90 L140,90 Z" />
+    <!-- 汽车顶部 -->
+    <path
+        android:fillColor="#F44336"
+        android:pathData="M150,60 L170,60 L175,70 L145,70 Z" />
+    <!-- 车轮 -->
+    <path
+        android:fillColor="#333333"
+        android:pathData="M148,90 A6,6 0 1,0 160,90 A6,6 0 1,0 148,90" />
+    <path
+        android:fillColor="#333333"
+        android:pathData="M170,90 A6,6 0 1,0 182,90 A6,6 0 1,0 170,90" />
+    <!-- 地面线 -->
+    <path
+        android:strokeColor="#F44336"
+        android:strokeWidth="2"
+        android:pathData="M20,100 L180,100" />
+</vector>

@@ -21,6 +21,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KeyManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SystemUpgradeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SmartChargeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChargingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChargeCompletedActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
