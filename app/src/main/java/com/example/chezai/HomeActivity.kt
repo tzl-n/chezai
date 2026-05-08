@@ -2,6 +2,7 @@ package com.example.chezai
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
@@ -24,6 +25,7 @@ class HomeActivity : AppCompatActivity() {
         }
         
         setupDrawer()
+        setupCardButtons()
         setupSidebarMenu()
     }
     
@@ -36,6 +38,31 @@ class HomeActivity : AppCompatActivity() {
             if (!drawerLayout.isDrawerOpen(findViewById(R.id.sidebarMenu))) {
                 drawerLayout.openDrawer(findViewById(R.id.sidebarMenu))
             }
+        }
+    }
+    
+    private fun setupCardButtons() {
+        // 锁图标点击跳转到挂车展开页面
+        findViewById<ImageView>(R.id.ivLockIcon).setOnClickListener {
+            val intent = Intent(this, TrailerExpandActivity::class.java)
+            startActivity(intent)
+        }
+        
+        // 车图标点击跳转到车主服务页面
+        findViewById<ImageView>(R.id.ivCarIcon).setOnClickListener {
+            val intent = Intent(this, CarOwnerServiceActivity::class.java)
+            startActivity(intent)
+        }
+        
+        // 相机图标点击跳转到行车记录仪页面
+        findViewById<ImageView>(R.id.ivCameraIcon).setOnClickListener {
+            val intent = Intent(this, DashCamActivity::class.java)
+            startActivity(intent)
+        }
+        
+        // 磁铁图标点击事件
+        findViewById<ImageView>(R.id.ivMagnetIcon).setOnClickListener {
+            Toast.makeText(this, "磁铁功能", Toast.LENGTH_SHORT).show()
         }
     }
     
@@ -71,7 +98,8 @@ class HomeActivity : AppCompatActivity() {
         
         // 快捷控车
         findViewById<LinearLayout>(R.id.menuControl).setOnClickListener {
-            Toast.makeText(this, "快捷控车", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, QuickControlActivity::class.java)
+            startActivity(intent)
             drawerLayout.closeDrawers()
         }
         

@@ -27,9 +27,35 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- 右侧车辆信息面板 -->
+        <!-- 已挂车状态 -->
+        <LinearLayout
+            android:id="@+id/statusLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/headerTitle">
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_status_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="已挂车"
+                android:textColor="#666666"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- 右侧白色卡片区域 -->
         <androidx.cardview.widget.CardView
-            android:layout_width="280dp"
+            android:layout_width="140dp"
             android:layout_height="0dp"
             android:layout_marginTop="100dp"
             android:layout_marginEnd="0dp"
@@ -44,7 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:padding="24dp"
+                android:padding="16dp"
                 android:gravity="center_horizontal">
 
                 <!-- 筋斗云标题 -->
@@ -86,27 +112,110 @@
                     android:orientation="vertical"
                     android:gravity="center">
 
-                    <!-- 锁图标 -->
-                    <ImageView
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:layout_marginBottom="32dp"
-                        android:src="@drawable/ic_lock" />
+                    <!-- 锁图标按钮 -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/btnLock"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_marginBottom="24dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#F44336"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/ivLockIcon"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:src="@drawable/ic_lock_white"
+                                android:clickable="true"
+                                android:focusable="true" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
 
                     <!-- 车图标 -->
                     <ImageView
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:layout_marginBottom="32dp"
-                        android:src="@drawable/ic_car" />
+                        android:id="@+id/ivCarIcon"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="24dp"
+                        android:src="@drawable/ic_car"
+                        android:clickable="true"
+                        android:focusable="true" />
 
                     <!-- 相机图标 -->
                     <ImageView
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:layout_marginBottom="32dp"
+                        android:id="@+id/ivCameraIcon"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="24dp"
                         android:src="@drawable/ic_camera" />
 
+                    <!-- 磁铁图标 -->
+                    <ImageView
+                        android:id="@+id/ivMagnetIcon"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_magnet" />
+
+                </LinearLayout>
+
+                <!-- 电量显示区域 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="77"
+                            android:textColor="#000000"
+                            android:textSize="32sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:text="%"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_marginTop="8dp">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:background="#E0E0E0" />
+
+                        <View
+                            android:layout_width="77dp"
+                            android:layout_height="4dp"
+                            android:background="#FF5722" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="剩余电量"
+                        android:textColor="#999999"
+                        android:textSize="12sp" />
                 </LinearLayout>
 
             </LinearLayout>

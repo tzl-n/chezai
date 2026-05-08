@@ -2,7 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -38,6 +42,42 @@
             android:exported="false" />
         <activity
             android:name=".ChargeCompletedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MessageManageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarOwnerServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CallPhoneActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TrailerExpandActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TrailerDarkModeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashCamActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashCamSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarEnvironmentControlActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RemoteControlActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuickControlActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MapNavigationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SearchParkingActivity"
             android:exported="false" />
     </application>
 

@@ -1,0 +1,11 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <!-- 扫描扇形 -->
+    <path
+        android:fillColor="#F44336"
+        android:fillAlpha="0.3"
+        android:pathData="M50,50 L50,5 A45,45 0 0,1 95,50 Z" />
+</vector>
