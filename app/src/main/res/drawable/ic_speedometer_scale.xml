@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="240dp"
+    android:height="240dp"
+    android:viewportWidth="240"
+    android:viewportHeight="240">
+    <!-- 刻度线 -->
+    <path android:strokeColor="#CCCCCC" android:strokeWidth="2" android:pathData="M120,20 L120,30" />
+    <path android:strokeColor="#CCCCCC" android:strokeWidth="2" android:pathData="M162,31 L158,39" />
+    <path android:strokeColor="#CCCCCC" android:strokeWidth="2" android:pathData="M195,60 L189,66" />
+    <path android:strokeColor="#CCCCCC" android:strokeWidth="2" android:pathData="M210,100 L202,104" />
+    <path android:strokeColor="#CCCCCC" android:strokeWidth="2" android:pathData="M210,140 L202,136" />
+    <path android:strokeColor="#CCCCCC" android:strokeWidth="2" android:pathData="M195,180 L189,174" />
+    <path android:strokeColor="#CCCCCC" android:strokeWidth="2" android:pathData="M162,209 L158,201" />
+    <path android:strokeColor="#CCCCCC" android:strokeWidth="2" android:pathData="M120,220 L120,210" />
+    <path android:strokeColor="#CCCCCC" android:strokeWidth="2" android:pathData="M78,209 L82,201" />
+    <path android:strokeColor="#CCCCCC" android:strokeWidth="2" android:pathData="M45,180 L51,174" />
+    <path android:strokeColor="#CCCCCC" android:strokeWidth="2" android:pathData="M30,140 L38,136" />
+    <path android:strokeColor="#CCCCCC" android:strokeWidth="2" android:pathData="M30,100 L38,104" />
+    <path android:strokeColor="#CCCCCC" android:strokeWidth="2" android:pathData="M45,60 L51,66" />
+    <path android:strokeColor="#CCCCCC" android:strokeWidth="2" android:pathData="M78,31 L82,39" />
+</vector>

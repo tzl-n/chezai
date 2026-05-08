@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Chezai"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".ChargingMapActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,6 +38,48 @@
             android:exported="false" />
         <activity
             android:name=".ChargeCompletedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TemperatureControlActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MapNavigationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RentalTimeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrderDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BatteryReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VehicleInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GasStationListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarStatusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChargingReservationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChargingStationListActivity"
             android:exported="false" />
     </application>
 
