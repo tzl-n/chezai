@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A1A1A"
+    android:orientation="vertical"
+    tools:context=".CarPanoramaActivity">
+
+    <!-- 顶部栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <!-- 返回按钮 -->
+        <LinearLayout
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_back"
+                android:contentDescription="返回" />
+        </LinearLayout>
+
+        <!-- 标题 -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="全景视图"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <!-- 解锁按钮 -->
+        <LinearLayout
+            android:id="@+id/btn_unlock"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:background="#FF6B6B"
+            android:gravity="center"
+            android:layout_marginEnd="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="解锁"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- 更多按钮 -->
+        <LinearLayout
+            android:id="@+id/btn_more"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_more"
+                android:contentDescription="更多" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 全景视图区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#000000"
+        android:gravity="center">
+
+        <!-- 车辆俯视图 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img_17"
+            android:scaleType="fitCenter"
+            android:contentDescription="全景车辆" />
+    </LinearLayout>
+
+    <!-- 视角控制按钮区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2A2A2A"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- 俯视图 -->
+            <LinearLayout
+                android:id="@+id/btn_top_view"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="#3A3A3A"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginEnd="12dp">
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_top"
+                    android:contentDescription="俯视图" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="俯视"
+                    android:textColor="#999999"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- 前视图 -->
+            <LinearLayout
+                android:id="@+id/btn_front_view"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="#3A3A3A"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginEnd="12dp">
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_front"
+                    android:contentDescription="前视图" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="前方"
+                    android:textColor="#999999"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- 后视图 -->
+            <LinearLayout
+                android:id="@+id/btn_back_view"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="#3A3A3A"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginEnd="12dp">
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_back"
+                    android:contentDescription="后视图" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="后方"
+                    android:textColor="#999999"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- 左视图 -->
+            <LinearLayout
+                android:id="@+id/btn_left_view"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="#3A3A3A"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginEnd="12dp">
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_left"
+                    android:contentDescription="左视图" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="左侧"
+                    android:textColor="#999999"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- 右视图 -->
+            <LinearLayout
+                android:id="@+id/btn_right_view"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="#3A3A3A"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_right"
+                    android:contentDescription="右视图" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="右侧"
+                    android:textColor="#999999"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 底部控制栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#000000"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- 自动旋转 -->
+            <LinearLayout
+                android:id="@+id/btn_auto_rotate"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#2A2A2A"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginEnd="16dp">
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_rotate"
+                    android:contentDescription="自动旋转" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="自动"
+                    android:textColor="#999999"
+                    android:textSize="10sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- 360度 -->
+            <LinearLayout
+                android:id="@+id/btn_360"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#2A2A2A"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginEnd="16dp">
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_360"
+                    android:contentDescription="360度" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="360"
+                    android:textColor="#999999"
+                    android:textSize="10sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- 截图 -->
+            <LinearLayout
+                android:id="@+id/btn_screenshot"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#2A2A2A"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginEnd="16dp">
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_camera"
+                    android:contentDescription="截图" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="截图"
+                    android:textColor="#999999"
+                    android:textSize="10sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- 录像 -->
+            <LinearLayout
+                android:id="@+id/btn_record"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#2A2A2A"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginEnd="16dp">
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_video"
+                    android:contentDescription="录像" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="录像"
+                    android:textColor="#999999"
+                    android:textSize="10sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- 全屏 -->
+            <LinearLayout
+                android:id="@+id/btn_fullscreen"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#2A2A2A"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_fullscreen"
+                    android:contentDescription="全屏" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="全屏"
+                    android:textColor="#999999"
+                    android:textSize="10sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Chezai"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +21,51 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarControlActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarLockActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarControlDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarAppControlActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarSmartConnectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OneClickLockActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarModelSelectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarDrivingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarSmartAppActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarPanoramaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TripDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ParkedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AcControlActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

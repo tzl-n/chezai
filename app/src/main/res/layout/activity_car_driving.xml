@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A1F44"
+    tools:context=".CarDrivingActivity">
+
+    <!-- 关闭按钮 -->
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_close_circle"
+        android:background="@drawable/bg_circle_button_dark"
+        android:contentDescription="关闭"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 标题区域 -->
+    <LinearLayout
+        android:id="@+id/title_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/btn_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="高速行驶"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="4TH WEEK"
+            android:textColor="#6B7FA3"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- 车辆和按钮区域 -->
+    <RelativeLayout
+        android:id="@+id/car_area"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/title_area"
+        app:layout_constraintBottom_toTopOf="@id/car_info_area">
+
+        <!-- 锚点按钮 -->
+        <ImageView
+            android:id="@+id/btn_anchor"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="80dp"
+            android:padding="12dp"
+            android:src="@drawable/ic_anchor"
+            android:background="@drawable/bg_circle_button_dark"
+            android:contentDescription="锚点" />
+
+        <!-- 移动按钮 -->
+        <ImageView
+            android:id="@+id/btn_move"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="80dp"
+            android:padding="12dp"
+            android:src="@drawable/ic_move_arrow"
+            android:background="@drawable/bg_circle_button_dark"
+            android:contentDescription="移动" />
+
+        <!-- 车辆图片 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_7"
+            android:contentDescription="车辆" />
+    </RelativeLayout>
+
+    <!-- 底部车辆信息区域 -->
+    <LinearLayout
+        android:id="@+id/car_info_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_buttons">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保时捷911 MODEL 2023"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="PORSCHE"
+            android:textColor="#6B7FA3"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- 底部操作按钮 -->
+    <LinearLayout
+        android:id="@+id/bottom_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- 上传按钮 -->
+        <ImageView
+            android:id="@+id/btn_upload"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_upload_yellow"
+            android:contentDescription="上传" />
+
+        <!-- 刷新按钮 -->
+        <ImageView
+            android:id="@+id/btn_refresh"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="32dp"
+            android:padding="14dp"
+            android:src="@drawable/ic_refresh"
+            android:background="@drawable/bg_circle_button_dark"
+            android:contentDescription="刷新" />
+
+        <!-- 下载按钮 -->
+        <ImageView
+            android:id="@+id/btn_download"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_download_yellow"
+            android:contentDescription="下载" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
