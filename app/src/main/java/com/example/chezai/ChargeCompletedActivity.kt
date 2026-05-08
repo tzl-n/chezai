@@ -1,8 +1,8 @@
 package com.example.chezai
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -32,7 +32,9 @@ class ChargeCompletedActivity : AppCompatActivity() {
         
         // 关闭按钮
         findViewById<Button>(R.id.btnClose).setOnClickListener {
-            Toast.makeText(this, "关闭页面", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, HomeActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+            startActivity(intent)
             finish()
         }
     }

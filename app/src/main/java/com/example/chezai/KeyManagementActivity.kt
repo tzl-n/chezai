@@ -1,5 +1,6 @@
 package com.example.chezai
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -41,7 +42,8 @@ class KeyManagementActivity : AppCompatActivity() {
         
         // 自拍解锁
         findViewById<LinearLayout>(R.id.btnSelfieUnlock).setOnClickListener {
-            Toast.makeText(this, "自拍解锁", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, SelfieUnlockActivity::class.java)
+            startActivity(intent)
         }
         
         // 定位找车
@@ -51,7 +53,8 @@ class KeyManagementActivity : AppCompatActivity() {
         
         // 录音锁车
         findViewById<LinearLayout>(R.id.btnRecordLock).setOnClickListener {
-            Toast.makeText(this, "录音锁车", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, VoiceLockActivity::class.java)
+            startActivity(intent)
         }
         
         // 靠近解锁

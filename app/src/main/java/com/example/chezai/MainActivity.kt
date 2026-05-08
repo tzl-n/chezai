@@ -2,19 +2,23 @@ package com.example.chezai
 
 import android.content.Intent
 import android.os.Bundle
+<<<<<<< HEAD
 import android.view.animation.Animation
 import android.view.animation.RotateAnimation
 import android.widget.FrameLayout
+=======
+import android.os.Handler
+import android.os.Looper
+>>>>>>> tang
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+<<<<<<< HEAD
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -26,6 +30,9 @@ class MainActivity : AppCompatActivity() {
         
         // 设置进入按钮点击事件
         setupEnterButton()
+=======
+
+>>>>>>> tang
     }
     
     private fun startRadarAnimation() {
